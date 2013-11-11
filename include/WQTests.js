@@ -368,7 +368,9 @@ x.prototypify(true);
 
 //x.mergeDown();
 
-alert(x[1]);
+alert(x);
+
+/* Todo: add: .where(), which takes a function and passes each .each() array member to the function and includes those function calls that return true, discarding all else, or it takes a non-function, where it strict-compares the argument to each each() array member and includes it only on equivalence. */
 
 alert(x[0].b + " " + x[1].b + " " + x[2].b + " " + x[3].b);
 

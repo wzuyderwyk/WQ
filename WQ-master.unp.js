@@ -16,8 +16,8 @@
 #define WQELEMENTS 1
 
 
-(function (functionShouldbeExecuted) {
-if (functionShouldbeExecuted !== true) return;
+//(function (functionShouldbeExecuted) {
+//if (functionShouldbeExecuted !== true) return;
 this["WQ"] = { /* Use of [...] to create property rather than variable for indirect references (e.g. through WQElements.global) */
 
   $x_model: null,
@@ -65,10 +65,10 @@ this["WQElements"] = this.WQ.$x_modules[WQELEMENTS][MODULE_CONSTRUCTOR];
 
 WQElements.prototype = this.WQ.$x_modules[WQELEMENTS][MODULE_PROTOTYPE];
 
-}).apply(DEFACTO_GLOBAL,[CONSTRUCT_MASTER_WQ_OBJECT]);
+//}).apply(DEFACTO_GLOBAL,[CONSTRUCT_MASTER_WQ_OBJECT]);
 
 // Test suite
-(function (functionShouldbeExecuted) {
-if (functionShouldbeExecuted !== true) return;
+//(function (functionShouldbeExecuted) {
+//if (functionShouldbeExecuted !== true) return;
 #include <WQTests.js>
-}).apply(DEFACTO_GLOBAL,[EXECUTE_TESTS]);
+//}).apply(DEFACTO_GLOBAL,[EXECUTE_TESTS]);

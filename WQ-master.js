@@ -3,8 +3,8 @@
 
 // GeneriQ WQ. Part of GeneriQ Q.
 // @author: Wietse Zuyderwyk
-(function (functionShouldbeExecuted) {
-if (functionShouldbeExecuted !== true) return;
+//(function (functionShouldbeExecuted) {
+//if (functionShouldbeExecuted !== true) return;
 this["WQ"] = {
 
   $x_model: null,
@@ -516,11 +516,11 @@ this["WQElements"] = this.WQ.$x_modules[1][0];
 
 WQElements.prototype = this.WQ.$x_modules[1][1];
 
-}).apply(this,[true]);
+//}).apply(this,[true]);
 
 // Test suite
-(function (functionShouldbeExecuted) {
-if (functionShouldbeExecuted !== true) return;
+//(function (functionShouldbeExecuted) {
+//if (functionShouldbeExecuted !== true) return;
 
 
 
@@ -892,7 +892,9 @@ x.prototypify(true);
 
 //x.mergeDown();
 
-alert(x[1]);
+alert(x);
+
+
 
 alert(x[0].b + " " + x[1].b + " " + x[2].b + " " + x[3].b);
 
@@ -929,4 +931,4 @@ alert(X.toString());
 alert(Object.keys(X));
 
 //alert(Object.keys(x));
-}).apply(this,[true]);
+//}).apply(this,[true]);
