@@ -1,0 +1,64 @@
+<!DOCTYPE html >
+
+<html>
+
+<head>
+<title>WQ Test</title>
+</head>
+
+<body>
+<div id="WQ.dom"></div>
+
+
+
+<script type="text/javascript">
+
+var WQ = new Function();
+
+WQ.dom = Object.defineProperty(new Function(""),"prototype",
+  { value:
+    {
+      $_resolve: function() {
+        var nodeList = [];
+        Object.keys(WQ.dom).forEach(
+          function (property) {
+            var propertyDescriptor;
+            if((propertyDescriptor = Object.getOwnPropertyDescriptor(WQ.dom,property)).value.type == 1) {
+              var node = document.createElement(propertyDescriptor.value.name);
+              Object.defineProperty(WQ.dom,property,{
+                set: function (text) { node.textContent = text; },
+                get: function () { return node; }
+              });
+              nodeList.push(node);
+            }
+          }
+        );
+        if(WQ.dom.$_referent instanceof Node) nodeList.forEach(function (node) { WQ.dom.$_referent.appendChild(node); });
+        return nodeList;
+      }
+    }
+  }
+);
+
+WQ.dom = new WQ.dom();
+
+
+WQ.dom.test = { type: 1, name: "div" };
+
+WQ.dom.anotherTest = { type: 1, name: "a" };
+
+// WQ.dom.$_resolve.apply(WQ.dom).forEach(function(node) { document.getElementById("WQ.dom").appendChild(node); });
+
+WQ.dom.$_referent = document.getElementById("WQ.dom");
+
+WQ.dom.$_resolve()[1].setAttribute("href","#");
+
+WQ.dom.test = "Hello!";
+
+WQ.dom.anotherTest = "Hyperlink";
+
+</script>
+
+</body>
+
+</html>

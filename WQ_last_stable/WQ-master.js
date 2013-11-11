@@ -3,10 +3,6 @@
 
 // GeneriQ WQ. Part of GeneriQ Q.
 // @author: Wietse Zuyderwyk
-
-
-
-// Defaults/stubs
 //(function (functionShouldbeExecuted) {
 //if (functionShouldbeExecuted !== true) return;
 this["WQ"] = {
@@ -523,10 +519,8 @@ WQElements.prototype = this.WQ.$x_modules[1][1];
 //}).apply(this,[true]);
 
 // Test suite
-(function (functionShouldbeExecuted) {
-if (functionShouldbeExecuted !== true) return;
-
-
+//(function (functionShouldbeExecuted) {
+//if (functionShouldbeExecuted !== true) return;
 
 autoreleasepool = function (global,ancestors,name) {
   if(!autoreleasepool.prototype.isPrototypeOf(this)) {
@@ -896,10 +890,6 @@ x.prototypify(true);
 
 //x.mergeDown();
 
-alert(x);
-
-
-
 alert(x[0].b + " " + x[1].b + " " + x[2].b + " " + x[3].b);
 
 //alert(x.b$x_parent.constructor.prototype.b$x_parent.constructor.prototype);
@@ -935,4 +925,4 @@ alert(X.toString());
 alert(Object.keys(X));
 
 //alert(Object.keys(x));
-}).apply(this,[true]);
+//}).apply(this,[true]);

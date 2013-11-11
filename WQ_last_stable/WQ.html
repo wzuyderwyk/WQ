@@ -1,0 +1,36 @@
+<!DOCTYPE html >
+
+<html>
+<head>
+<title>WebkistQ</title>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="main"><div>
+
+</div></div>
+
+<div id="copy"></div>
+
+<div id="test"></div>
+
+<script type="text/javascript" src="WQ.js"></script>
+
+<script type="text/javascript">
+document.getElementById("main").wq = (new WQ).wqDOMNodeExtension;
+alert(document.getElementById("main").wq("element(\"SPAN\",[],[text(\"\\\"test\\\"\")])",true));
+
+alert("hi!");
+</script>
+
+<script id="WQ0" type="application/x-wq">div()</script>
+
+</body>
+
+</html>

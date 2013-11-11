@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>iframe xsl test</title>
+
+</head>
+
+<body>
+
+<iframe src="styleTest.xsl" style="width: 100%; height: 700px"></iframe>
+
+<script>
+
+alert(document.querySelector("iframe").contentWindow.document.documentElement.nodeName);
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>js xsl test</title>
+
+</head>
+
+<body>
+
+<div></div>
+
+<script>
+
+var processor = new XSLTProcessor();
+
+alert(processor);
+
+var testTransform = document.implementation.createDocument("", "test", null);
+// just an example to get a transform into a script as a DOM
+// XMLDocument.load is asynchronous, so all processing happens in the 
+// onload handler
+testTransform.addEventListener("load", onload, false);
+testTransform.load("minimal.xsl");
+function onload() {
+  processor.importStylesheet(testTransform);
+}
+
+</script>
+
+</body>
+
+</html>
